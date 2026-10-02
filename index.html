@@ -1,0 +1,1940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shree Jain Properties | Commercial & Residential Real Estate in Guwahati</title>
+  <meta name="description" content="Shree Jain Properties - 19 years of trusted real estate services in Chatribari, Guwahati. Commercial rental, residential properties, land deals & property consulting." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    /* ===== CSS RESET & BASE ===== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #1e3a8a;
+      --primary-dark: #172554;
+      --primary-light: #2563eb;
+      --gold: #fbbf24;
+      --gold-dark: #d97706;
+      --white: #ffffff;
+      --gray-50: #f9fafb;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-500: #6b7280;
+      --gray-600: #4b5563;
+      --gray-700: #374151;
+      --gray-900: #111827;
+      --green-500: #22c55e;
+      --green-600: #16a34a;
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      font-family: var(--font);
+      color: var(--gray-900);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* ===== UTILITY CLASSES ===== */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .section-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #eff6ff;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.875rem;
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      font-weight: 800;
+      color: var(--gray-900);
+      margin-bottom: 1rem;
+      line-height: 1.15;
+    }
+
+    .section-title span {
+      color: var(--primary);
+    }
+
+    .section-subtitle {
+      font-size: 1.125rem;
+      color: var(--gray-600);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); }
+      50% { box-shadow: 0 0 0 15px rgba(34, 197, 94, 0); }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .stagger-1 { transition-delay: 0.1s; }
+    .stagger-2 { transition-delay: 0.2s; }
+    .stagger-3 { transition-delay: 0.3s; }
+    .stagger-4 { transition-delay: 0.4s; }
+    .stagger-5 { transition-delay: 0.5s; }
+    .stagger-6 { transition-delay: 0.6s; }
+
+    /* ===== HEADER ===== */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      transition: all 0.3s ease;
+      padding: 0;
+    }
+
+    .header.scrolled {
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(4px);
+      transition: background 0.3s;
+    }
+
+    .header.scrolled .logo-icon {
+      background: var(--primary);
+    }
+
+    .logo-icon svg {
+      width: 24px;
+      height: 24px;
+      color: var(--gold);
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-name {
+      font-weight: 700;
+      font-size: 1.1rem;
+      line-height: 1.2;
+      color: var(--white);
+      transition: color 0.3s;
+    }
+
+    .header.scrolled .logo-name {
+      color: var(--primary);
+    }
+
+    .logo-tagline {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 0.5px;
+    }
+
+    /* Desktop Nav */
+    .nav-desktop {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.9);
+      transition: color 0.2s;
+      font-size: 0.95rem;
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gold);
+      transition: width 0.3s;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .header.scrolled .nav-link {
+      color: var(--gray-700);
+    }
+
+    .nav-link:hover {
+      color: var(--gold);
+    }
+
+    .header.scrolled .nav-link:hover {
+      color: var(--gold-dark);
+    }
+
+    .nav-cta {
+      background: var(--gold);
+      color: var(--primary);
+      font-weight: 700;
+      padding: 0.625rem 1.5rem;
+      border-radius: 9999px;
+      font-size: 0.95rem;
+      transition: all 0.3s;
+      box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+    }
+
+    .nav-cta:hover {
+      background: var(--gold-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(251, 191, 36, 0.4);
+    }
+
+    /* Mobile Menu */
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      border-radius: 8px;
+      color: var(--white);
+      transition: color 0.3s;
+    }
+
+    .header.scrolled .mobile-toggle {
+      color: var(--primary);
+    }
+
+    .mobile-toggle svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--white);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      border-top: 1px solid var(--gray-100);
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .mobile-menu.open {
+      max-height: 400px;
+    }
+
+    .mobile-menu-inner {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .mobile-nav-link {
+      display: block;
+      padding: 0.875rem 1rem;
+      color: var(--gray-700);
+      font-weight: 500;
+      border-radius: 10px;
+      transition: all 0.2s;
+    }
+
+    .mobile-nav-link:hover {
+      background: #eff6ff;
+      color: var(--primary);
+    }
+
+    .mobile-cta {
+      display: block;
+      text-align: center;
+      background: var(--gold);
+      color: var(--primary);
+      font-weight: 700;
+      padding: 0.875rem 1rem;
+      border-radius: 10px;
+      margin-top: 0.5rem;
+      transition: background 0.2s;
+    }
+
+    .mobile-cta:hover {
+      background: var(--gold-dark);
+    }
+
+    @media (max-width: 768px) {
+      .nav-desktop { display: none; }
+      .mobile-toggle { display: flex; }
+      .mobile-menu { display: block; }
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+    }
+
+    .hero-bg-effects {
+      position: absolute;
+      inset: 0;
+      opacity: 0.12;
+      pointer-events: none;
+    }
+
+    .hero-blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+    }
+
+    .hero-blob-1 {
+      top: 10%;
+      left: 5%;
+      width: 300px;
+      height: 300px;
+      background: var(--gold);
+    }
+
+    .hero-blob-2 {
+      bottom: 10%;
+      right: 5%;
+      width: 400px;
+      height: 400px;
+      background: #60a5fa;
+    }
+
+    .hero-blob-3 {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 600px;
+      background: var(--gold);
+      opacity: 0.2;
+      filter: blur(120px);
+    }
+
+    .hero-particles {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+
+    .hero-particle {
+      position: absolute;
+      border-radius: 50%;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .hero-particle:nth-child(1) {
+      top: 25%;
+      right: 25%;
+      width: 8px;
+      height: 8px;
+      background: var(--gold);
+      animation-delay: 0s;
+    }
+
+    .hero-particle:nth-child(2) {
+      top: 33%;
+      left: 33%;
+      width: 12px;
+      height: 12px;
+      background: rgba(255, 255, 255, 0.3);
+      animation-delay: 1s;
+    }
+
+    .hero-particle:nth-child(3) {
+      bottom: 33%;
+      right: 33%;
+      width: 8px;
+      height: 8px;
+      background: rgba(251, 191, 36, 0.5);
+      animation-delay: 2s;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      padding: 8rem 1.5rem 4rem;
+      max-width: 900px;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 9999px;
+      padding: 0.5rem 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-badge svg {
+      width: 16px;
+      height: 16px;
+      color: var(--gold);
+      fill: var(--gold);
+    }
+
+    .hero-badge-text {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    .hero-title {
+      font-size: clamp(2.25rem, 6vw, 4.5rem);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-title .highlight {
+      color: var(--gold);
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      color: rgba(255, 255, 255, 0.75);
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    @media (min-width: 640px) {
+      .hero-buttons {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      font-weight: 700;
+      padding: 1rem 2rem;
+      border-radius: 9999px;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: none;
+      width: 100%;
+      max-width: 280px;
+    }
+
+    .btn svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--primary);
+      box-shadow: 0 8px 30px rgba(251, 191, 36, 0.3);
+    }
+
+    .btn-gold:hover {
+      background: var(--gold-dark);
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 12px 40px rgba(251, 191, 36, 0.4);
+    }
+
+    .btn-green {
+      background: var(--green-500);
+      color: var(--white);
+      box-shadow: 0 8px 30px rgba(34, 197, 94, 0.3);
+    }
+
+    .btn-green:hover {
+      background: var(--green-600);
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 12px 40px rgba(34, 197, 94, 0.4);
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
+      .hero-stats {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .hero-stat {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 1.25rem;
+    }
+
+    .hero-stat-value {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--gold);
+    }
+
+    .hero-stat-label {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.65);
+      margin-top: 0.25rem;
+    }
+
+    /* Scroll Indicator */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: bounce 2s ease-in-out infinite;
+    }
+
+    .scroll-indicator-inner {
+      width: 24px;
+      height: 40px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 12px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 8px;
+    }
+
+    .scroll-indicator-dot {
+      width: 6px;
+      height: 12px;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 3px;
+      animation: fadeIn 1.5s ease-in-out infinite;
+    }
+
+    /* ===== ABOUT SECTION ===== */
+    .about {
+      padding: 5rem 0 6rem;
+      background: var(--white);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    @media (min-width: 768px) {
+      .about-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+      }
+    }
+
+    .about-text p {
+      color: var(--gray-600);
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .rating-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      background: linear-gradient(135deg, #eff6ff, rgba(251, 191, 36, 0.1));
+      border: 1px solid #dbeafe;
+      border-radius: 16px;
+      padding: 1.25rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    }
+
+    .rating-stars {
+      display: flex;
+      gap: 2px;
+    }
+
+    .rating-stars svg {
+      width: 24px;
+      height: 24px;
+      color: var(--gold);
+      fill: var(--gold);
+    }
+
+    .rating-stars svg:last-child {
+      fill: rgba(251, 191, 36, 0.5);
+    }
+
+    .rating-value {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--gray-900);
+    }
+
+    .rating-value small {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--gray-500);
+    }
+
+    .rating-reviews {
+      font-size: 0.85rem;
+      color: var(--gray-500);
+    }
+
+    /* About Card */
+    .about-card {
+      position: relative;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      border-radius: 24px;
+      padding: 2.5rem;
+      color: var(--white);
+      box-shadow: 0 25px 60px rgba(30, 58, 138, 0.3);
+    }
+
+    .about-card-badge {
+      position: absolute;
+      top: -12px;
+      right: -8px;
+      background: var(--gold);
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+    }
+
+    .about-card h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-card-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .about-card-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 0.95rem;
+    }
+
+    .about-card-list li .check-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: rgba(251, 191, 36, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .about-card-list li .check-icon svg {
+      width: 14px;
+      height: 14px;
+      color: var(--gold);
+    }
+
+    .about-card-decor {
+      position: absolute;
+      bottom: -16px;
+      left: -16px;
+      width: 96px;
+      height: 96px;
+      background: rgba(251, 191, 36, 0.15);
+      border-radius: 16px;
+      z-index: -1;
+    }
+
+    /* ===== SERVICES SECTION ===== */
+    .services {
+      padding: 5rem 0 6rem;
+      background: var(--gray-50);
+    }
+
+    .services-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 640px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 2rem;
+      border: 1px solid var(--gray-100);
+      transition: all 0.4s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+      border-color: rgba(30, 58, 138, 0.15);
+    }
+
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      transition: transform 0.3s;
+    }
+
+    .service-card:hover .service-icon {
+      transform: scale(1.1);
+    }
+
+    .service-icon svg {
+      width: 28px;
+      height: 28px;
+      color: var(--white);
+    }
+
+    .service-icon-1 { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+    .service-icon-2 { background: linear-gradient(135deg, #10b981, #047857); }
+    .service-icon-3 { background: linear-gradient(135deg, #22c55e, #15803d); }
+    .service-icon-4 { background: linear-gradient(135deg, #a855f7, #7c3aed); }
+    .service-icon-5 { background: linear-gradient(135deg, #f97316, #c2410c); }
+    .service-icon-6 { background: linear-gradient(135deg, #ef4444, #b91c1c); }
+
+    .service-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 0.75rem;
+      transition: color 0.3s;
+    }
+
+    .service-card:hover h3 {
+      color: var(--primary);
+    }
+
+    .service-card p {
+      color: var(--gray-600);
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+
+    /* ===== WHY CHOOSE US ===== */
+    .why-us {
+      padding: 5rem 0 6rem;
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary), var(--primary-light));
+      position: relative;
+      overflow: hidden;
+    }
+
+    .why-us-bg {
+      position: absolute;
+      inset: 0;
+      opacity: 0.08;
+      pointer-events: none;
+    }
+
+    .why-us-bg-blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+    }
+
+    .why-us-bg-blob-1 {
+      top: 0;
+      right: 0;
+      width: 400px;
+      height: 400px;
+      background: var(--gold);
+    }
+
+    .why-us-bg-blob-2 {
+      bottom: 0;
+      left: 0;
+      width: 300px;
+      height: 300px;
+      background: var(--white);
+    }
+
+    .why-us-header {
+      text-align: center;
+      margin-bottom: 4rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .why-us-header .section-badge {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--gold);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .why-us-header .section-title {
+      color: var(--white);
+    }
+
+    .why-us-header .section-title span {
+      color: var(--gold);
+    }
+
+    .why-us-header .section-subtitle {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .why-us-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    @media (min-width: 640px) {
+      .why-us-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .why-us-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .why-us-card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.4s ease;
+    }
+
+    .why-us-card:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: translateY(-6px);
+    }
+
+    .why-us-card-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      background: rgba(251, 191, 36, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      transition: background 0.3s;
+    }
+
+    .why-us-card:hover .why-us-card-icon {
+      background: rgba(251, 191, 36, 0.25);
+    }
+
+    .why-us-card-icon svg {
+      width: 32px;
+      height: 32px;
+      color: var(--gold);
+    }
+
+    .why-us-card-stat {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+
+    .why-us-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+
+    .why-us-card p {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    /* ===== CONTACT SECTION ===== */
+    .contact {
+      padding: 5rem 0 6rem;
+      background: var(--white);
+    }
+
+    .contact-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+      }
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      padding: 1.25rem;
+      background: var(--gray-50);
+      border-radius: 16px;
+      border: 1px solid var(--gray-100);
+      transition: all 0.3s;
+    }
+
+    a.contact-item:hover {
+      background: #eff6ff;
+      border-color: rgba(30, 58, 138, 0.15);
+    }
+
+    .contact-item-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: rgba(30, 58, 138, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.3s;
+    }
+
+    a.contact-item:hover .contact-item-icon {
+      background: var(--primary);
+    }
+
+    .contact-item-icon svg {
+      width: 24px;
+      height: 24px;
+      color: var(--primary);
+      transition: color 0.3s;
+    }
+
+    a.contact-item:hover .contact-item-icon svg {
+      color: var(--white);
+    }
+
+    .contact-item-label {
+      font-size: 0.85rem;
+      color: var(--gray-500);
+      font-weight: 500;
+    }
+
+    .contact-item-value {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--gray-900);
+    }
+
+    .contact-item-sub {
+      font-size: 0.85rem;
+      color: var(--primary);
+      font-weight: 500;
+    }
+
+    .contact-item-sub-gray {
+      font-size: 0.85rem;
+      color: var(--gray-500);
+    }
+
+    /* WhatsApp CTA Card */
+    .whatsapp-card {
+      background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+      border: 1px solid #bbf7d0;
+      border-radius: 24px;
+      padding: 3rem 2rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .whatsapp-icon-wrapper {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--green-500);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 8px 25px rgba(34, 197, 94, 0.3);
+      animation: pulseGlow 2s infinite;
+    }
+
+    .whatsapp-icon-wrapper svg {
+      width: 40px;
+      height: 40px;
+      color: var(--white);
+    }
+
+    .whatsapp-card h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 0.75rem;
+    }
+
+    .whatsapp-card p {
+      color: var(--gray-600);
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .btn-whatsapp-large {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: var(--green-500);
+      color: var(--white);
+      font-weight: 700;
+      padding: 1.25rem 2.5rem;
+      border-radius: 9999px;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+      box-shadow: 0 8px 30px rgba(34, 197, 94, 0.3);
+    }
+
+    .btn-whatsapp-large:hover {
+      background: var(--green-600);
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 12px 40px rgba(34, 197, 94, 0.4);
+    }
+
+    .btn-whatsapp-large svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .whatsapp-card .reply-note {
+      font-size: 0.85rem;
+      color: var(--gray-500);
+      margin-top: 1rem;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--primary-dark);
+      color: var(--white);
+      padding: 4rem 0 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      padding-bottom: 3rem;
+    }
+
+    @media (min-width: 768px) {
+      .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+      }
+    }
+
+    .footer-brand p {
+      color: rgba(255, 255, 255, 0.55);
+      line-height: 1.7;
+      margin-top: 1rem;
+    }
+
+    .footer h4 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.55);
+      transition: color 0.2s;
+      padding: 0.25rem 0;
+      display: block;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold);
+    }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: rgba(255, 255, 255, 0.55);
+      margin-bottom: 0.75rem;
+      transition: color 0.2s;
+    }
+
+    .footer-contact-item:hover {
+      color: var(--gold);
+    }
+
+    .footer-contact-item svg {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+    }
+
+    .footer-whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(34, 197, 94, 0.15);
+      color: #4ade80;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      margin-top: 0.75rem;
+      transition: background 0.2s;
+    }
+
+    .footer-whatsapp-btn:hover {
+      background: rgba(34, 197, 94, 0.25);
+    }
+
+    .footer-whatsapp-btn svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 1.5rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    .footer-copyright {
+      color: rgba(255, 255, 255, 0.45);
+      font-size: 0.875rem;
+    }
+
+    .footer-rating {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: rgba(255, 255, 255, 0.45);
+      font-size: 0.875rem;
+    }
+
+    .footer-rating svg {
+      width: 16px;
+      height: 16px;
+      color: var(--gold);
+      fill: var(--gold);
+    }
+
+    /* ===== FLOATING BUTTONS ===== */
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 1.5rem;
+      left: 1.5rem;
+      width: 56px;
+      height: 56px;
+      background: var(--green-500);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
+      z-index: 999;
+      transition: all 0.3s;
+      animation: pulseGlow 2s infinite;
+    }
+
+    .floating-whatsapp:hover {
+      background: var(--green-600);
+      transform: scale(1.1);
+    }
+
+    .floating-whatsapp svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    .scroll-top-btn {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      width: 48px;
+      height: 48px;
+      background: var(--primary);
+      color: var(--white);
+      border: none;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(30, 58, 138, 0.3);
+      z-index: 999;
+      transition: all 0.3s;
+      opacity: 0;
+      transform: translateY(16px);
+      pointer-events: none;
+    }
+
+    .scroll-top-btn.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: all;
+    }
+
+    .scroll-top-btn:hover {
+      background: var(--primary-light);
+      transform: translateY(-2px);
+    }
+
+    .scroll-top-btn svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    /* ===== RESPONSIVE TWEAKS ===== */
+    @media (max-width: 768px) {
+      .hero-content {
+        padding: 7rem 1rem 3rem;
+      }
+
+      .about-card {
+        padding: 2rem;
+      }
+
+      .whatsapp-card {
+        padding: 2rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="#home" class="logo">
+          <div class="logo-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-name">Shree Jain</span>
+            <span class="logo-tagline">PROPERTIES</span>
+          </div>
+        </a>
+
+        <nav class="nav-desktop">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <a href="tel:08487807942" class="nav-cta">Call Now</a>
+        </nav>
+
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+          <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          <svg id="closeIcon" style="display:none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-inner">
+        <a href="#home" class="mobile-nav-link" onclick="closeMobileMenu()">Home</a>
+        <a href="#about" class="mobile-nav-link" onclick="closeMobileMenu()">About</a>
+        <a href="#services" class="mobile-nav-link" onclick="closeMobileMenu()">Services</a>
+        <a href="#contact" class="mobile-nav-link" onclick="closeMobileMenu()">Contact</a>
+        <a href="tel:08487807942" class="mobile-cta">📞 Call Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg-effects">
+      <div class="hero-blob hero-blob-1"></div>
+      <div class="hero-blob hero-blob-2"></div>
+      <div class="hero-blob hero-blob-3"></div>
+    </div>
+    <div class="hero-particles">
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <span class="hero-badge-text">Rated 4.1 ★ | 19 Years of Excellence</span>
+      </div>
+
+      <h1 class="hero-title">
+        Find Your Perfect <span class="highlight">Commercial</span> & <span class="highlight">Residential</span> Property in Guwahati
+      </h1>
+
+      <p class="hero-subtitle">
+        19 Years of Trust | 45+ Happy Clients | Commercial &amp; Residential Experts
+      </p>
+
+      <div class="hero-buttons">
+        <a href="tel:08487807942" class="btn btn-gold">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call Now
+        </a>
+        <a href="https://wa.me/9108487807942" target="_blank" rel="noopener noreferrer" class="btn btn-green">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          WhatsApp Us
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-value">19+</div>
+          <div class="hero-stat-label">Years Experience</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-value">45+</div>
+          <div class="hero-stat-label">Happy Clients</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-value">4.1★</div>
+          <div class="hero-stat-label">Google Rating</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-value">100%</div>
+          <div class="hero-stat-label">Verified Deals</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-indicator-inner">
+        <div class="scroll-indicator-dot"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text animate-on-scroll">
+          <div class="section-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+            About Us
+          </div>
+          <h2 class="section-title">
+            About <span>Shree Jain</span> <span style="color: var(--gold-dark);">Properties</span>
+          </h2>
+          <p>Established in 2007, we are one of the leading real estate agencies in Chatribari, Guwahati. With 19 years of experience and 45+ five-star ratings, we specialize in commercial rental properties, residential properties, land deals, and property consulting.</p>
+          <p>Our commitment to transparency, trust, and client satisfaction has made us the preferred choice for property seekers in Guwahati and across Assam.</p>
+
+          <div class="rating-badge">
+            <div>
+              <div class="rating-stars">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+            </div>
+            <div>
+              <div class="rating-value">4.1 <small>/ 5.0</small></div>
+              <div class="rating-reviews">45+ Google Reviews</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="animate-on-scroll stagger-2" style="position: relative;">
+          <div class="about-card">
+            <div class="about-card-badge">Since 2007</div>
+            <h3>Why Clients Trust Us</h3>
+            <ul class="about-card-list">
+              <li>
+                <span class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                19 years of proven track record
+              </li>
+              <li>
+                <span class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                Expert knowledge of Guwahati market
+              </li>
+              <li>
+                <span class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                Transparent &amp; honest dealings
+              </li>
+              <li>
+                <span class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                End-to-end property assistance
+              </li>
+              <li>
+                <span class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                Strong network of property owners
+              </li>
+              <li>
+                <span class="check-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                Dedicated customer support
+              </li>
+            </ul>
+          </div>
+          <div class="about-card-decor"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES SECTION ===== -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="services-header animate-on-scroll">
+        <div class="section-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>
+          What We Offer
+        </div>
+        <h2 class="section-title">Our <span>Services</span></h2>
+        <p class="section-subtitle">Comprehensive real estate solutions for all your property needs in Guwahati</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card animate-on-scroll stagger-1">
+          <div class="service-icon service-icon-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>
+          </div>
+          <h3>Commercial Rental</h3>
+          <p>Premium office spaces, shops, and commercial properties for rent in prime Guwahati locations.</p>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card animate-on-scroll stagger-2">
+          <div class="service-icon service-icon-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>Residential Properties</h3>
+          <p>Find your dream home — apartments, villas, and independent houses across Guwahati.</p>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card animate-on-scroll stagger-3">
+          <div class="service-icon service-icon-3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 14c.4.7.6 1.5.6 2.3a4.7 4.7 0 0 1-9.4 0c0-.9.2-1.7.6-2.3"/><path d="M12 2v10"/><path d="M4.7 12.5C3 13.5 2 15 2 16.7a4.3 4.3 0 0 0 8.6 0c0-1.7-1-3.2-2.7-4.2"/><path d="M19.3 12.5c-1.7 1-2.7 2.5-2.7 4.2a4.3 4.3 0 0 0 8.6 0c0-1.7-1-3.2-2.7-4.2"/><path d="M8 8C5.6 9.2 4 11 4 13"/><path d="M16 8c2.4 1.2 4 3 4 5"/></svg>
+          </div>
+          <h3>Land &amp; Plots</h3>
+          <p>Verified land and plot deals for residential and commercial purposes at competitive prices.</p>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card animate-on-scroll stagger-4">
+          <div class="service-icon service-icon-4">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><path d="M9 14l2 2 4-4"/></svg>
+          </div>
+          <h3>Property Consulting</h3>
+          <p>Expert guidance on property investment, legal documentation, and market analysis.</p>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-card animate-on-scroll stagger-5">
+          <div class="service-icon service-icon-5">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 8.35V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8.35A2 2 0 0 1 3.26 6.5l8-3.2a2 2 0 0 1 1.48 0l8 3.2A2 2 0 0 1 22 8.35Z"/><path d="M6 18h12"/><path d="M6 14h12"/><rect x="6" y="10" width="12" height="12"/></svg>
+          </div>
+          <h3>Commercial Spaces</h3>
+          <p>Showrooms, warehouses, and business spaces tailored to your commercial needs.</p>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="service-card animate-on-scroll stagger-6">
+          <div class="service-icon service-icon-6">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/></svg>
+          </div>
+          <h3>Warehouse &amp; Industrial</h3>
+          <p>Industrial plots, warehouses, and factory spaces for manufacturing and logistics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY CHOOSE US ===== -->
+  <section class="why-us">
+    <div class="why-us-bg">
+      <div class="why-us-bg-blob why-us-bg-blob-1"></div>
+      <div class="why-us-bg-blob why-us-bg-blob-2"></div>
+    </div>
+    <div class="container">
+      <div class="why-us-header animate-on-scroll">
+        <div class="section-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Why Choose Us
+        </div>
+        <h2 class="section-title">Why Choose <span>Shree Jain Properties</span>?</h2>
+        <p class="section-subtitle">We go beyond just selling properties — we build lasting relationships</p>
+      </div>
+
+      <div class="why-us-grid">
+        <div class="why-us-card animate-on-scroll stagger-1">
+          <div class="why-us-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+          </div>
+          <div class="why-us-card-stat">19+</div>
+          <h3>19 Years Experience</h3>
+          <p>Nearly two decades of expertise in Guwahati real estate market.</p>
+        </div>
+
+        <div class="why-us-card animate-on-scroll stagger-2">
+          <div class="why-us-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"/></svg>
+          </div>
+          <div class="why-us-card-stat">45+</div>
+          <h3>45+ Positive Reviews</h3>
+          <p>Trusted by dozens of satisfied clients with 5-star ratings.</p>
+        </div>
+
+        <div class="why-us-card animate-on-scroll stagger-3">
+          <div class="why-us-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <div class="why-us-card-stat">100%</div>
+          <h3>Verified Properties</h3>
+          <p>Every property is legally verified and documentation-checked.</p>
+        </div>
+
+        <div class="why-us-card animate-on-scroll stagger-4">
+          <div class="why-us-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <div class="why-us-card-stat">Best</div>
+          <h3>Best Deals in Guwahati</h3>
+          <p>Competitive pricing and exclusive deals you won't find elsewhere.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-header animate-on-scroll">
+        <div class="section-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Contact Us
+        </div>
+        <h2 class="section-title">Get In <span>Touch</span></h2>
+        <p class="section-subtitle">Ready to find your perfect property? Reach out to us today!</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info animate-on-scroll stagger-1">
+          <!-- Phone -->
+          <a href="tel:08487807942" class="contact-item">
+            <div class="contact-item-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <div class="contact-item-label">Call Us</div>
+              <div class="contact-item-value">084878 07942</div>
+              <div class="contact-item-sub">Click to call →</div>
+            </div>
+          </a>
+
+          <!-- Location -->
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="contact-item-label">Visit Us</div>
+              <div class="contact-item-value">Chatribari, Guwahati</div>
+              <div class="contact-item-sub-gray">Assam, India</div>
+            </div>
+          </div>
+
+          <!-- Hours -->
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <div class="contact-item-label">Business Hours</div>
+              <div class="contact-item-value">Open until 7:00 PM</div>
+              <div class="contact-item-sub-gray">Monday - Saturday</div>
+            </div>
+          </div>
+
+          <!-- Rating -->
+          <div class="contact-item">
+            <div class="contact-item-icon" style="background: rgba(251, 191, 36, 0.15);">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--gold)" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div>
+              <div class="contact-item-label">Google Rating</div>
+              <div class="contact-item-value">4.1 ★ (45 Reviews)</div>
+              <div class="contact-item-sub-gray">Trusted by clients</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- WhatsApp Card -->
+        <div class="animate-on-scroll stagger-3">
+          <div class="whatsapp-card">
+            <div class="whatsapp-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            </div>
+            <h3>Chat With Us on WhatsApp</h3>
+            <p>Get instant replies about available properties, pricing, and site visits.</p>
+            <a href="https://wa.me/9108487807942" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-large">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              Chat on WhatsApp
+            </a>
+            <p class="reply-note">Usually replies within minutes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-icon" style="background: rgba(251, 191, 36, 0.15);">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>
+            </div>
+            <div class="logo-text">
+              <span class="logo-name" style="color: #fff;">Shree Jain</span>
+              <span class="logo-tagline">PROPERTIES</span>
+            </div>
+          </div>
+          <p>Your trusted real estate partner in Guwahati since 2007. Specializing in commercial and residential properties.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h4>Contact Info</h4>
+          <a href="tel:08487807942" class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            084878 07942
+          </a>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            Chatribari, Guwahati
+          </div>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Open until 7:00 PM
+          </div>
+          <a href="https://wa.me/9108487807942" target="_blank" rel="noopener noreferrer" class="footer-whatsapp-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            WhatsApp Us
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 Shree Jain Properties. All Rights Reserved.</p>
+        <div class="footer-rating">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Rated 4.1/5 on Google
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/9108487807942" target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Chat on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+  </a>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    // ===== HEADER SCROLL EFFECT =====
+    const header = document.getElementById('header');
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+    function handleScroll() {
+      const scrollY = window.scrollY;
+
+      // Header background
+      if (scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+
+      // Scroll to top button
+      if (scrollY > 500) {
+        scrollTopBtn.classList.add('visible');
+      } else {
+        scrollTopBtn.classList.remove('visible');
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // Initial check
+
+    // ===== SCROLL TO TOP =====
+    scrollTopBtn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // ===== MOBILE MENU =====
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    const closeIcon = document.getElementById('closeIcon');
+    let isMenuOpen = false;
+
+    mobileToggle.addEventListener('click', function () {
+      isMenuOpen = !isMenuOpen;
+      mobileMenu.classList.toggle('open', isMenuOpen);
+      menuIcon.style.display = isMenuOpen ? 'none' : 'block';
+      closeIcon.style.display = isMenuOpen ? 'block' : 'none';
+    });
+
+    function closeMobileMenu() {
+      isMenuOpen = false;
+      mobileMenu.classList.remove('open');
+      menuIcon.style.display = 'block';
+      closeIcon.style.display = 'none';
+    }
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function (e) {
+      if (isMenuOpen && !mobileToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+        closeMobileMenu();
+      }
+    });
+
+    // ===== SCROLL ANIMATIONS (Intersection Observer) =====
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    animatedElements.forEach(function (el) {
+      observer.observe(el);
+    });
+
+    // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
+    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetEl = document.querySelector(targetId);
+        if (targetEl) {
+          const headerHeight = header.offsetHeight;
+          const targetPosition = targetEl.getBoundingClientRect().top + window.scrollY - headerHeight;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
